@@ -1,0 +1,203 @@
+body {
+    display: grid;
+    grid-template: 1fr 5fr/1fr 4fr;
+    grid-template-areas: 
+    "aside header"
+    "aside main"
+    ;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template: 1fr 2fr/ 3fr 1fr 1fr;
+    grid-template-areas: 
+    "search userinfo userinfo"
+    "usermain userbtns userbtns"
+    ;
+    padding: 15px;
+    gap: 20px 5px;
+}
+
+aside {
+    grid-area: aside;
+    background: #0ea5e9;
+    color: white;
+    padding: 10px 20px;
+}
+
+main {
+    grid-area: main;
+    background: rgba(211, 211, 211, 0.623);
+    display: grid;
+    grid-template: 1fr 1fr/ 4fr 1fr;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending"
+    ;
+    padding: 15px;
+    gap: 10px;
+}
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template: repeat(auto-fill, minmax(25%, 1fr))/
+                repeat(auto-fill, minmax(45%, 1fr)) ;
+    gap: 10px;
+}
+
+.projects > article {
+    padding: 20px;
+}
+
+.projects button {
+    border: none;
+    border-radius: 40px;
+    background: none;
+    margin: 10px;
+
+}
+
+.proart {
+    background: white;
+    border-radius: 10px;
+    height: 200px;
+    border-left: 10px solid rgb(221, 192, 98);
+}
+
+.announce {
+    grid-area: announcements;
+    display: grid;
+    background: white;
+    border-radius: 10px;
+    font-size: 10px;
+}
+.announce > article {
+    height: 85px;
+    padding: 10px;
+}
+.trending {
+    grid-area: trending;
+    display: grid;
+    grid-template-rows: repeat(4, 84px);
+    border-radius: 20px;
+    background: white;
+    padding: 10px;
+}
+.altuser {
+    display: grid;
+    grid-template: 1fr 2fr/ 1fr 4fr;
+    grid-template-areas: 
+    "altpfp altuser"
+    "altpfp altprg"
+    ;
+}
+
+.altuser img {
+    grid-area: altpfp;
+}
+.altuser h5 {
+    grid-area: altuser;
+}
+.altuser h6 {
+    grid-area: altprg;
+}
+.search {
+    grid-area: search;
+    font-size: 20px;
+    display: flex;
+    gap: 20px;
+    height: 30px;
+    align-items: center;
+}
+
+.search input {
+    border: none;
+    background: rgb(194, 204, 202);
+}
+
+.userinfo {
+    grid-area: userinfo;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    height: 30px;
+    gap: 30px;
+    justify-self:flex-end;
+    margin-right: 50px;
+}
+
+.userinfo img {
+    border-radius: 25px;
+    width: 50px;
+}
+
+.usergreet {
+    grid-area: usermain;
+    display: grid;
+    grid-template: 1fr 2fr/1fr 3fr;
+    grid-template-areas: 
+    "pfpmain sp"
+    "pfpmain usm"
+    ;
+    align-items: center;
+    justify-items: start;
+    height: 60px;
+    width: 60%;
+}
+
+.usergreet img {
+    border-radius: 35px;
+    width: 70px;
+    grid-area: pfpmain;
+    justify-self: end;
+}
+
+.userbtns {
+    grid-area: userbtns;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 60px;
+    align-items: center;
+}
+
+.userbtns button{
+    padding: 10px 20px;
+    height: 40px;
+    border-radius: 20px;
+    background: #0ea5e9;
+    border: none;
+    color: white;
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+#search {
+    flex: 1;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+aside li {
+    margin: 20px 0;
+}
+
+aside div {
+    margin: 50px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+aside h2 {
+    font-size: 30px;
+}
