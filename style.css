@@ -97,6 +97,9 @@ main {
 
 .altuser img {
     grid-area: altpfp;
+    border-radius: 25px;
+    width: 50px;
+    
 }
 
 .search {
