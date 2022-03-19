@@ -79,6 +79,8 @@ main {
 .announce > article {
     height: 85px;
     padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+    margin: 10px;
 }
 .trending {
     grid-area: trending;
@@ -89,23 +91,14 @@ main {
     padding: 10px;
 }
 .altuser {
-    display: grid;
-    grid-template: 1fr 2fr/ 1fr 4fr;
-    grid-template-areas: 
-    "altpfp altuser"
-    "altpfp altprg"
-    ;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.137);
 }
 
 .altuser img {
     grid-area: altpfp;
 }
-.altuser h5 {
-    grid-area: altuser;
-}
-.altuser h6 {
-    grid-area: altprg;
-}
+
 .search {
     grid-area: search;
     font-size: 20px;
